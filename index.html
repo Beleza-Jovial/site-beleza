@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beleza Jovial - Autocuidado Natural</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts - Elegante e Limpa -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* Paleta de cores suaves */
+    :root {
+      --cor-primaria: #f7e9ec;
+      --cor-secundaria: #ffe6cc;
+      --cor-destaque: #d7e5d1;
+      --cor-texto: #4d4545;
+      --cor-branca: #fff;
+      --cor-botao: #f5b7b1;
+      --cor-botao-hover: #e5989b;
+      --cor-footer: #f8f9fa;
+    }
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background-color: var(--cor-primaria);
+      color: var(--cor-texto);
+    }
+    h1, h2, h3, .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+    .navbar {
+      background-color: var(--cor-branca);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .navbar-brand {
+      font-size: 1.7rem;
+      color: var(--cor-botao);
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+    .nav-link {
+      color: var(--cor-texto) !important;
+      font-weight: 500;
+      margin-right: 1rem;
+    }
+    .nav-link:hover {
+      color: var(--cor-botao-hover) !important;
+    }
+    .hero-section {
+      background: linear-gradient(120deg, var(--cor-secundaria) 70%, var(--cor-destaque) 100%);
+      padding: 3rem 0 2.5rem 0;
+      text-align: center;
+      position: relative;
+    }
+    .hero-img {
+      width: 100%;
+      max-width: 480px;
+      border-radius: 20px;
+      object-fit: cover;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 24px rgba(245,183,177,0.10);
+    }
+    .hero-title {
+      font-size: 2.3rem;
+      color: #a14e5c;
+      margin-bottom: 1rem;
+    }
+    .hero-btn {
+      background: var(--cor-botao);
+      color: var(--cor-branca);
+      border: none;
+      border-radius: 40px;
+      padding: 0.7rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      transition: background 0.2s;
+    }
+    .hero-btn:hover {
+      background: var(--cor-botao-hover);
+    }
+    .section-title {
+      margin-top: 2.5rem;
+      margin-bottom: 1.2rem;
+      color: #a14e5c;
+      font-size: 2rem;
+    }
+    .sobre {
+      max-width: 650px;
+      margin: 0 auto 2.5rem auto;
+      background: var(--cor-branca);
+      border-radius: 16px;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 2px 12px rgba(215,229,209,0.10);
+      font-size: 1.15rem;
+    }
+    .blog-teasers .card {
+      border: none;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(255, 182, 193, 0.08);
+      margin-bottom: 1.2rem;
+      transition: transform 0.15s;
+    }
+    .blog-teasers .card:hover {
+      transform: translateY(-4px) scale(1.01);
+      box-shadow: 0 6px 24px rgba(255, 182, 193, 0.15);
+    }
+    .blog-teasers .card-img-top {
+      height: 170px;
+      object-fit: cover;
+      border-top-left-radius: 14px;
+      border-top-right-radius: 14px;
+    }
+    .ebooks-box {
+      background: var(--cor-destaque);
+      border-radius: 18px;
+      padding: 2rem 1.5rem;
+      margin: 2rem 0;
+      text-align: center;
+      box-shadow: 0 3px 20px rgba(167, 190, 174, 0.09);
+    }
+    .ebooks-btn {
+      background: var(--cor-botao);
+      color: var(--cor-branca);
+      border: none;
+      border-radius: 40px;
+      padding: 0.6rem 2rem;
+      font-weight: 700;
+      margin-top: 1rem;
+      transition: background 0.2s;
+    }
+    .ebooks-btn:hover {
+      background: var(--cor-botao-hover);
+    }
+    .depoimentos {
+      background: var(--cor-branca);
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(215,229,209,0.07);
+      padding: 1.7rem 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .depoimento {
+      font-style: italic;
+      margin-bottom: 1.1rem;
+      color: #7e5a63;
+    }
+    .depoimento-nome {
+      font-weight: 700;
+      color: var(--cor-botao-hover);
+      font-size: 1.05rem;
+    }
+    .footer {
+      background: var(--cor-footer);
+      padding: 2rem 0 1rem 0;
+      text-align: center;
+      color: #888;
+      font-size: 1rem;
+      margin-top: 2rem;
+    }
+    .footer a {
+      color: #a14e5c;
+      margin: 0 0.7rem;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+    .lead-capture-popup {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      background: var(--cor-branca);
+      box-shadow: 0 4px 18px rgba(245,183,177,0.13);
+      border-radius: 14px;
+      padding: 1.3rem 1.2rem 1rem;
+      z-index: 9999;
+      min-width: 270px;
+      max-width: 320px;
+      display: none; /* Inicialmente escondido */
+      animation: popup-in 0.7s;
+    }
+    @keyframes popup-in {
+      from { transform: translateY(50px) scale(0.95); opacity: 0; }
+      to { transform: translateY(0) scale(1); opacity: 1; }
+    }
+    .lead-capture-popup h5 {
+      font-size: 1.17rem;
+      color: var(--cor-botao-hover);
+      margin-bottom: 0.5rem;
+      font-family: 'Playfair Display', serif;
+    }
+    .lead-capture-popup .form-control {
+      border-radius: 10px;
+      margin-bottom: 0.7rem;
+      border: 1px solid #f5b7b1;
+    }
+    .lead-capture-popup .btn {
+      border-radius: 40px;
+      background: var(--cor-botao);
+      color: var(--cor-branca);
+      font-weight: 700;
+    }
+    .lead-capture-popup .btn:hover {
+      background: var(--cor-botao-hover);
+    }
+    .lead-capture-close {
+      position: absolute;
+      top: 8px; right: 14px;
+      background: none;
+      border: none;
+      color: #aaa;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+    @media (max-width: 767px) {
+      .hero-title { font-size: 1.5rem; }
+      .section-title { font-size: 1.2rem; }
+      .hero-img { max-width: 94vw; }
+      .lead-capture-popup { right: 10px; left: 10px; max-width: 98vw;}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">Beleza Jovial</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="menu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ebooks">E-books</a></li>
+          <li class="nav-item"><a class="nav-link" href="#receitas">Receitas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero-section">
+    <!-- Imagem Hero - substitua a URL pela sua imagem -->
+    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80" 
+         alt="Beleza natural" class="hero-img shadow">
+    <div class="container">
+      <h1 class="hero-title">Autocuidado Natural: Sua beleza começa no bem-estar</h1>
+      <p class="mb-4">Descubra como pequenas atitudes podem transformar sua autoestima, saúde e rotina.</p>
+      <a href="#captura" class="hero-btn">Receba seu Guia de Beleza Natural</a>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section class="sobre mt-4" id="sobre">
+    <h2 class="section-title text-center">Minha Missão</h2>
+    <p class="text-center">
+      Sou apaixonada por incentivar o autocuidado real, acessível e natural para mulheres que buscam mais leveza, saúde e autoestima. 
+      Aqui, compartilho dicas, receitas, inspirações e experiências para que você se sinta bem consigo mesma, sem padrões inalcançáveis. 
+      Juntas, celebramos a beleza do dia a dia e o bem-estar holístico!
+    </p>
+  </section>
+
+  <!-- Blog Teasers -->
+  <section id="blog" class="container blog-teasers">
+    <h2 class="section-title text-center">Últimos Posts do Blog</h2>
+    <div class="row justify-content-center">
+      <!-- Post 1 -->
+      <div class="col-md-4">
+        <div class="card">
+          <!-- Substitua a URL da imagem -->
+          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Dica de autocuidado">
+          <div class="card-body">
+            <h5 class="card-title">Rotina de autocuidado fácil</h5>
+            <p class="card-text">Confira como adotar hábitos simples para cuidar da sua pele e mente, mesmo nos dias corridos.</p>
+            <a href="#" class="btn btn-link p-0">Ler mais</a>
+          </div>
+        </div>
+      </div>
+      <!-- Post 2 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Beleza natural">
+          <div class="card-body">
+            <h5 class="card-title">Beleza real: valorize o que é seu</h5>
+            <p class="card-text">Descubra como aceitar e realçar sua beleza única com dicas naturais e autoestima positiva.</p>
+            <a href="#" class="btn btn-link p-0">Ler mais</a>
+          </div>
+        </div>
+      </div>
+      <!-- Post 3 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Receita natural">
+          <div class="card-body">
+            <h5 class="card-title">Receita de máscara facial caseira</h5>
+            <p class="card-text">Aprenda a preparar uma máscara revitalizante com ingredientes naturais para sua pele.</p>
+            <a href="#" class="btn btn-link p-0">Ler mais</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- E-books Gratuitos -->
+  <section id="ebooks" class="container">
+    <div class="ebooks-box">
+      <h2 class="mb-2">Baixe gratuitamente nossos e-books e guias</h2>
+      <p>Receba materiais exclusivos para sua rotina de autocuidado e bem-estar natural.</p>
+      <a href="#captura" class="ebooks-btn">Quero Receber</a>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section class="container depoimentos">
+    <h2 class="section-title text-center">Depoimentos Inspiradores</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="depoimento">
+          “As dicas de beleza natural mudaram minha autoestima. Hoje me sinto mais bonita e feliz sendo quem sou!”
+          <div class="depoimento-nome">— Camila, 28 anos</div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="depoimento">
+          “Aprendi a cuidar de mim de forma simples, sem gastar muito. O conteúdo é leve, acolhedor e transformador.”
+          <div class="depoimento-nome">— Joana, 34 anos</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Captura de Leads (Pop-up) -->
+  <div id="captura" class="lead-capture-popup">
+    <button class="lead-capture-close" onclick="document.getElementById('captura').style.display='none';" title="Fechar">&times;</button>
+    <h5>Receba Materiais Exclusivos!</h5>
+    <form>
+      <input type="text" class="form-control" placeholder="Seu nome" required>
+      <input type="email" class="form-control" placeholder="Seu e-mail" required>
+      <button type="submit" class="btn btn-block mt-2">Quero Receber</button>
+      <small class="form-text text-muted">Prometemos não enviar spam :)</small>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" id="contato">
+    <div>
+      <a href="https://instagram.com/" target="_blank" title="Instagram"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" width="22" alt="Instagram"></a>
+      <a href="mailto:contato@email.com" title="E-mail"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/gmail.svg" width="22" alt="E-mail"></a>
+      <a href="https://wa.me/5599999999999" target="_blank" title="WhatsApp"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/whatsapp.svg" width="22" alt="WhatsApp"></a>
+    </div>
+    <div class="mt-2">© 2025 Beleza Jovial. Feito com amor para o seu bem-estar.</div>
+  </footer>
+  
+  <!-- Bootstrap JS (Pop-up, menu, etc) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Exibe o pop-up de captura de leads após 5 segundos
+    setTimeout(function() {
+      document.getElementById('captura').style.display = 'block';
+    }, 5000);
+
+    // Fecha o pop-up ao enviar o formulário (simulação)
+    document.querySelector('.lead-capture-popup form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Obrigado! Em breve você receberá conteúdos exclusivos.');
+      document.getElementById('captura').style.display = 'none';
+    });
+  </script>
+</body>
+</html>
