@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beleza Jovial</title>
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fffaf7;
+      color: #333;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      color: #a67658;
+    }
+    .navbar {
+      background-color: #fbeee6;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1556228853-4c4c0dcd99ae?auto=format&fit=crop&w=1600&q=80') no-repeat center center;
+      background-size: cover;
+      padding: 100px 20px;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    .hero > * {
+      position: relative;
+      z-index: 1;
+    }
+    .btn-custom {
+      background-color: #a67658;
+      color: white;
+      border-radius: 30px;
+      padding: 10px 30px;
+    }
+    .section {
+      padding: 60px 20px;
+    }
+    .ebook-box, .testimonials, .lead-capture {
+      background-color: #fbeee6;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    footer {
+      background-color: #f3e7de;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">Beleza Jovial</a>
+    <div class="collapse navbar-collapse justify-content-center">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#ebooks">E-books</a></li>
+        <li class="nav-item"><a class="nav-link" href="#receitas">Receitas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Descubra sua Beleza Natural e Autêntica</h1>
+    <p>Dicas práticas de autocuidado que valorizam o que há de mais belo em você: sua essência.</p>
+    <a href="#" class="btn btn-custom mt-3">Quero meu Guia Gratuito</a>
+  </section>
+
+  <!-- Sobre -->
+  <section class="section text-center">
+    <div class="container">
+      <h2>Sobre o Projeto</h2>
+      <p>A <strong>Beleza Jovial</strong> nasceu com a missão de inspirar mulheres reais a cuidarem de si com leveza, autoestima e escolhas naturais. Aqui, o brilho vem de dentro — e se revela no dia a dia. É um espaço para você que busca saúde, bem-estar e beleza com propósito.</p>
+    </div>
+  </section>
+
+  <!-- Blog Teasers -->
+  <section id="blog" class="section">
+    <div class="container">
+      <h2 class="text-center">Últimos Posts</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="https://images.unsplash.com/photo-1612817151320-ffa3f241081e?auto=format&fit=crop&w=400&q=80" class="img-fluid rounded" alt="Rotina matinal">
+          <h4>Rotina de autocuidado matinal</h4>
+          <p>Dicas para começar o dia com energia, pele saudável e mente leve.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=400&q=80" class="img-fluid rounded" alt="Alimentos naturais">
+          <h4>Alimentação e Beleza</h4>
+          <p>O que você consome reflete diretamente na sua pele e bem-estar. Veja como!</p>
+        </div>
+        <div class="col-md-4">
+          <img src="https://images.unsplash.com/photo-1556228724-4f2b9b0fd8a2?auto=format&fit=crop&w=400&q=80" class="img-fluid rounded" alt="Meditação e relaxamento">
+          <h4>Bem-estar em pequenos rituais</h4>
+          <p>Momentos simples podem transformar o seu dia. Inspire-se com nossas sugestões.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- E-books Gratuitos -->
+  <section id="ebooks" class="section text-center">
+    <div class="container ebook-box">
+      <h2>Receba E-books Exclusivos</h2>
+      <p>Baixe gratuitamente nossos guias de beleza natural, saúde feminina e bem-estar.</p>
+      <a href="#" class="btn btn-custom">Quero Receber</a>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section class="section testimonials">
+    <div class="container">
+      <h2 class="text-center">Depoimentos</h2>
+      <blockquote class="blockquote">
+        "Nunca me senti tão bem comigo mesma. As dicas da Beleza Jovial mudaram minha rotina e autoestima."
+        <footer class="blockquote-footer">Camila R.</footer>
+      </blockquote>
+      <blockquote class="blockquote">
+        "Encontrei aqui um espaço de acolhimento e inspiração. Hoje me cuido com mais carinho."
+        <footer class="blockquote-footer">Juliana M.</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Captura de Leads -->
+  <section class="section lead-capture text-center">
+    <div class="container">
+      <h2>Receba Dicas e Conteúdos Exclusivos</h2>
+      <form class="form-inline justify-content-center">
+        <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Seu nome">
+        <input type="email" class="form-control mb-2 mr-sm-2" placeholder="Seu e-mail">
+        <button type="submit" class="btn btn-custom mb-2">Quero Receber</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Siga nas redes sociais: @belezajovial</p>
+    <p>Email: contato@belezajovial.com</p>
+    <p>&copy; 2025 - Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
